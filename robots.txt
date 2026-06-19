@@ -1,0 +1,7 @@
+# Allow every crawler to read every page. There's nothing private here —
+# the contact form's privacy is enforced server-side by Turnstile + CORS,
+# not by hiding the page from crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://kishore-vivekanandan.github.io/sitemap.xml
