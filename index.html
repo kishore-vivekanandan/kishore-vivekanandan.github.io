@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kishore Kumar Vivekanandan — Engineering Leader, SAP BTP Core Experience</title>
+    <meta
+      name="description"
+      content="Personal site of Kishore Kumar Vivekanandan — Head of BTP Core Experience (Platform AI/UI/Automation) at SAP. Engineering leader, intrapreneurship mentor, writer."
+    />
+
+    <!-- Canonical URL for the page. Helps search engines and social platforms
+         agree on the "primary" address when the site is reachable via multiple
+         hostnames (CF route + reverse-proxied domain). -->
+    <link rel="canonical" href="https://kishore-kumar.cfapps.us10.hana.ondemand.com/" />
+
+    <!-- Open Graph: link preview cards on LinkedIn, Slack, iMessage, Facebook,
+         WhatsApp, Discord, and most other platforms. The image is the existing
+         headshot; platforms typically center-crop to 1.91:1. Swap to a designed
+         1200×630 card here if you ever want a tailored preview. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kishore Kumar Vivekanandan" />
+    <meta property="og:url" content="https://kishore-kumar.cfapps.us10.hana.ondemand.com/" />
+    <meta property="og:title" content="Kishore Kumar Vivekanandan — Engineering Leader, SAP BTP Core Experience" />
+    <meta
+      property="og:description"
+      content="Head of BTP Core Experience at SAP — leading the engineering teams behind BTP Cockpit, the btp CLI, and the AI capabilities bringing Joule into the platform."
+    />
+    <meta property="og:image" content="https://kishore-kumar.cfapps.us10.hana.ondemand.com/resources/kishore-kumar.jpeg" />
+    <meta property="og:image:alt" content="Portrait of Kishore Kumar Vivekanandan" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X uses its own meta namespace; summary_large_image is the
+         bigger card variant that suits portfolios better than the small one. -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kishore Kumar Vivekanandan — Engineering Leader, SAP BTP Core Experience" />
+    <meta
+      name="twitter:description"
+      content="Head of BTP Core Experience at SAP — leading the engineering teams behind BTP Cockpit, the btp CLI, and the AI capabilities bringing Joule into the platform."
+    />
+    <meta name="twitter:image" content="https://kishore-kumar.cfapps.us10.hana.ondemand.com/resources/kishore-kumar.jpeg" />
+    <meta name="twitter:image:alt" content="Portrait of Kishore Kumar Vivekanandan" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+            },
+            colors: {
+              ink: {
+                900: '#0b1220',
+                800: '#0f172a',
+                700: '#1e293b',
+                600: '#334155',
+              },
+              sap: {
+                500: '#0a6ed1',
+                400: '#0070f2',
+                300: '#3b9ff7',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background:
+          radial-gradient(1100px 600px at 80% -10%, rgba(10, 110, 209, 0.18), transparent 60%),
+          radial-gradient(900px 500px at -10% 30%, rgba(10, 110, 209, 0.10), transparent 60%),
+          #0b1220;
+      }
+      .dot-grid {
+        background-image: radial-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+        background-size: 22px 22px;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-slate-200 antialiased">
+    <!-- Top nav -->
+    <header class="sticky top-0 z-30 border-b border-white/5 bg-ink-900/70 backdrop-blur">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a href="#top" class="flex items-center gap-2 text-sm font-semibold tracking-tight text-white">
+          <span class="grid h-7 w-7 place-items-center rounded-md bg-sap-400 font-mono text-xs font-bold text-white">KK</span>
+          <span>Kishore Kumar</span>
+        </a>
+        <ul class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#work" class="hover:text-white">Work</a></li>
+          <li><a href="#experience" class="hover:text-white">Experience</a></li>
+          <li><a href="#writing" class="hover:text-white">Writing</a></li>
+          <li><a href="#speaking" class="hover:text-white">Speaking</a></li>
+          <li><a href="#awards" class="hover:text-white">Awards</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+        <a
+          href="#contact"
+          class="hidden rounded-md bg-sap-400 px-3.5 py-2 text-sm font-medium text-white shadow-sm hover:bg-sap-500 md:inline-block"
+          >Get in touch</a
+        >
+      </nav>
+    </header>
+
+    <main id="top" class="mx-auto max-w-6xl px-6">
+      <!-- HERO -->
+      <section class="relative pt-20 pb-24 sm:pt-28 sm:pb-32">
+        <div class="dot-grid absolute inset-0 -z-10 opacity-50"></div>
+        <div class="grid gap-12 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-sap-400/30 bg-sap-400/10 px-3 py-1 font-mono text-xs text-sap-300">
+              <span class="h-1.5 w-1.5 rounded-full bg-sap-300"></span>
+              Walldorf, Germany · Engineering Leader at SAP
+            </p>
+            <h1 class="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
+              Kishore Kumar
+              <span class="text-slate-400">Vivekanandan</span>
+            </h1>
+            <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300 sm:text-xl">
+              Head of <span class="text-white">BTP Core Experience</span> — Platform AI, UI &amp; Automation at SAP SE.
+              I lead the engineering teams behind <span class="text-white">BTP Cockpit</span>, the
+              <span class="text-white">btp CLI</span>, and the AI capabilities bringing
+              <span class="text-white">Joule</span> into the platform.
+            </p>
+            <p class="mt-4 max-w-3xl text-base text-slate-400">
+              Intrapreneurship &amp; technology mentor at SAP.iO. 5× SAP Catalyst. Aspiring
+              “organizational architect.” Artist, blogger, author on the side.
+            </p>
+            <div class="mt-9 flex flex-wrap items-center gap-3">
+              <a href="#work" class="rounded-md bg-sap-400 px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-sap-500">See what I work on</a>
+              <a href="#writing" class="rounded-md border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5">Read my writing</a>
+              <a
+                href="https://www.linkedin.com/in/mrkishore"
+                target="_blank"
+                rel="noopener"
+                class="rounded-md border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5"
+                >LinkedIn ↗</a
+              >
+            </div>
+          </div>
+          <div class="relative justify-self-start md:justify-self-end">
+            <div class="absolute -inset-3 -z-10 rounded-full bg-sap-400/20 blur-2xl"></div>
+            <img
+              src="resources/kishore-kumar.jpeg"
+              alt="Portrait of Kishore Kumar Vivekanandan"
+              class="h-48 w-48 rounded-full border border-white/10 object-cover shadow-xl ring-1 ring-sap-400/30 sm:h-56 sm:w-56 md:h-64 md:w-64"
+            />
+          </div>
+        </div>
+        <p class="mt-12 max-w-3xl font-mono text-xs text-slate-500">
+          // Views on this site are my own and do not represent SAP SE.
+        </p>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="border-t border-white/5 py-20">
+        <div class="grid gap-12 md:grid-cols-3">
+          <div>
+            <p class="font-mono text-xs uppercase tracking-widest text-sap-300">01 — About</p>
+            <h2 class="mt-2 text-3xl font-semibold text-white">A decade in SAP, building the layer customers actually touch.</h2>
+          </div>
+          <div class="md:col-span-2 space-y-5 text-base leading-relaxed text-slate-300">
+            <p>
+              I’ve spent more than ten years at SAP, growing from a software developer in Bangalore
+              building test frameworks for SAP CRM, through SAP Health where we shipped a connected
+              healthcare platform, into engineering leadership for the foundations of SAP Business
+              Technology Platform.
+            </p>
+            <p>
+              Today my teams own
+              <span class="text-white">BTP Cockpit</span> — the central management UI for every
+              service and environment on BTP — the
+              <span class="text-white">btp CLI</span> for the dev-ops crowd who live in a terminal,
+              the <span class="text-white">BTP Agent</span> generative-AI capabilities for operating
+              the platform, and a handful of BTP Neo Core services. The throughline: make the
+              administrative surface of a hyperscale enterprise platform feel humane.
+            </p>
+            <p>
+              I’m an aspiring organizational architect — I care about building engineering orgs that
+              hold up across very different macro conditions and keep contributing to SAP’s mission
+              of helping the world run better. Outside the day job I mentor intrapreneurs at SAP.iO,
+              write, paint, and have a Guinness record from the world’s largest coding marathon.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK / FOCUS AREAS -->
+      <section id="work" class="border-t border-white/5 py-20">
+        <div class="mb-12 flex items-end justify-between gap-6">
+          <div>
+            <p class="font-mono text-xs uppercase tracking-widest text-sap-300">02 — Work</p>
+            <h2 class="mt-2 text-3xl font-semibold text-white">What I lead today</h2>
+            <p class="mt-2 max-w-2xl text-slate-400">
+              The four product surfaces my teams own across BTP Core Experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2">
+          <!-- BTP Cockpit -->
+          <article class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-md bg-sap-400/10 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-sap-300">UI</span>
+              <span class="font-mono text-xs text-slate-500">/cockpit</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">BTP Cockpit</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              The central management UI for every SAP BTP service, subaccount, and environment.
+              The first surface most BTP customers see — and the one my teams keep coherent as
+              the platform grows.
+            </p>
+          </article>
+
+          <!-- btp CLI -->
+          <article class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-md bg-sap-400/10 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-sap-300">CLI</span>
+              <span class="font-mono text-xs text-slate-500">$ btp</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">btp CLI</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              A dev-ops &amp; cloud-native, terminal-friendly interface for interacting with BTP
+              services. Built for the people who never want to leave their shell — scripts,
+              CI pipelines, day-two operations.
+            </p>
+          </article>
+
+          <!-- Joule in BTP -->
+          <article class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-md bg-sap-400/10 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-sap-300">AI</span>
+              <span class="font-mono text-xs text-slate-500">/joule</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">Joule in BTP Cockpit</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Leading the investment case to infuse SAP’s copilot — Joule — into the BTP
+              administrative touch points. Less clicking through trees of services; more
+              describing what you want and getting it.
+            </p>
+          </article>
+
+          <!-- BTP Agent -->
+          <article class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-md bg-sap-400/10 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-sap-300">Agent</span>
+              <span class="font-mono text-xs text-slate-500">/agent</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">BTP Agent — Generative AI for Ops</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Generative-AI capabilities for operating the platform itself — translating
+              operator intent into safe, auditable platform actions. Plus stewardship of a few
+              BTP Neo Core services.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE TIMELINE -->
+      <section id="experience" class="border-t border-white/5 py-20">
+        <div class="mb-12">
+          <p class="font-mono text-xs uppercase tracking-widest text-sap-300">03 — Experience</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white">Career timeline</h2>
+          <p class="mt-2 max-w-2xl text-slate-400">
+            Fifteen years in software. Most of them at SAP, getting closer to the platform.
+          </p>
+        </div>
+
+        <ol class="relative space-y-8 border-l border-white/10 pl-8">
+          <li class="relative">
+            <span class="absolute -left-[37px] top-1.5 h-3 w-3 rounded-full bg-sap-400 ring-4 ring-sap-400/20"></span>
+            <p class="font-mono text-xs text-slate-500">Jul 2022 — Present · Walldorf, DE</p>
+            <h3 class="mt-1 text-lg font-semibold text-white">Development Manager — BTP Core Experience (Platform AI/UI/Automation)</h3>
+            <p class="text-sm text-sap-300">SAP SE</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Engineering leader for the teams owning BTP Cockpit, the btp CLI, the BTP Agent
+              generative-AI capabilities, and select BTP Neo Core services. Driving the
+              investment case for AI in the BTP admin surface.
+            </p>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[37px] top-1.5 h-3 w-3 rounded-full bg-slate-500 ring-4 ring-slate-500/20"></span>
+            <p class="font-mono text-xs text-slate-500">May 2019 — Present · SAP.iO</p>
+            <h3 class="mt-1 text-lg font-semibold text-white">Intrapreneurship Mentor</h3>
+            <p class="text-sm text-sap-300">SAP</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Mentoring social-impact ideas inside SAP — helping early-stage intrapreneurs shape
+              ventures aimed at improving the lives of a billion people.
+            </p>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[37px] top-1.5 h-3 w-3 rounded-full bg-slate-500 ring-4 ring-slate-500/20"></span>
+            <p class="font-mono text-xs text-slate-500">Jul 2021 — Jun 2022 · Walldorf, DE</p>
+            <h3 class="mt-1 text-lg font-semibold text-white">Technical Project Lead — SAP BTP CF &amp; Core Experience</h3>
+            <p class="text-sm text-sap-300">SAP SE</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Drove strategic initiatives to future-proof the BTP foundation and protect both
+              internal and external customers’ investments as the platform evolved.
+            </p>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[37px] top-1.5 h-3 w-3 rounded-full bg-slate-500 ring-4 ring-slate-500/20"></span>
+            <p class="font-mono text-xs text-slate-500">Jan 2019 — Jun 2021 · Walldorf, DE</p>
+            <h3 class="mt-1 text-lg font-semibold text-white">Senior Developer &amp; Scrum Master — SAP Health · SAP Global Mentor</h3>
+            <p class="text-sm text-sap-300">SAP SE</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Building healthcare services on the cloud to enable an Intelligent Enterprise for
+              hospitals.
+            </p>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[37px] top-1.5 h-3 w-3 rounded-full bg-slate-500 ring-4 ring-slate-500/20"></span>
+            <p class="font-mono text-xs text-slate-500">Mar 2016 — Dec 2018 · Walldorf, DE</p>
+            <h3 class="mt-1 text-lg font-semibold text-white">Developer / Associate Developer — SAP Health</h3>
+            <p class="text-sm text-sap-300">SAP SE</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Delivery of a connected health platform — personalized medicine and intelligent UX
+              for patients and care providers.
+            </p>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[37px] top-1.5 h-3 w-3 rounded-full bg-slate-500 ring-4 ring-slate-500/20"></span>
+            <p class="font-mono text-xs text-slate-500">Jun 2015 — Dec 2015 · Walldorf, DE</p>
+            <h3 class="mt-1 text-lg font-semibold text-white">Technologieberater &amp; UI Expert</h3>
+            <p class="text-sm text-sap-300">Exa AG (with SAP SE)</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Worked on SAP Medical Research Insights — the first product on SAP HANA Live in the
+              healthcare domain — bridging HANA modeling, oData services, and Fiori UIs.
+            </p>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[37px] top-1.5 h-3 w-3 rounded-full bg-slate-500 ring-4 ring-slate-500/20"></span>
+            <p class="font-mono text-xs text-slate-500">Jun 2014 — May 2015 · Bangalore, IN</p>
+            <h3 class="mt-1 text-lg font-semibold text-white">Technology Consultant</h3>
+            <p class="text-sm text-sap-300">Exa AG</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Built responsive Fiori-principle apps for SAP customers, working closely with UX
+              designers on customer-research-driven solutions.
+            </p>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[37px] top-1.5 h-3 w-3 rounded-full bg-slate-500 ring-4 ring-slate-500/20"></span>
+            <p class="font-mono text-xs text-slate-500">Aug 2011 — May 2014 · Bangalore, IN</p>
+            <h3 class="mt-1 text-lg font-semibold text-white">Software Developer</h3>
+            <p class="text-sm text-sap-300">SAP Labs India</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              UI and non-UI test frameworks for SAP CRM, SAP UI5, and WebDynpro — automated test
+              tooling in vb.net and ABAP, including BOL-API-driven CRM tests bypassing the UI.
+            </p>
+          </li>
+        </ol>
+
+        <!-- Education -->
+        <div class="mt-16 grid gap-5 md:grid-cols-2">
+          <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+            <p class="font-mono text-xs uppercase tracking-widest text-slate-500">Education</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">M.Tech, Software Systems</h3>
+            <p class="text-sm text-slate-400">BITS Pilani · 2012–2014</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+            <p class="font-mono text-xs uppercase tracking-widest text-slate-500">Education</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">B.Tech, Information Technology</h3>
+            <p class="text-sm text-slate-400">Anna University · 2007–2011</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WRITING / PUBLICATIONS -->
+      <section id="writing" class="border-t border-white/5 py-20">
+        <div class="mb-10">
+          <p class="font-mono text-xs uppercase tracking-widest text-sap-300">04 — Writing</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white">Articles, posts &amp; a book</h2>
+          <p class="mt-2 max-w-2xl text-slate-400">
+            “My favourite teachers are TED Talks and books.” I try to give some of that back.
+          </p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-3">
+          <a
+            href="https://mrkishore.medium.com/"
+            target="_blank"
+            rel="noopener"
+            class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]"
+          >
+            <p class="font-mono text-xs uppercase tracking-wider text-sap-300">Medium</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">mrkishore.medium.com</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Essays on engineering leadership, purpose, and pursuing meaningful work.
+            </p>
+            <p class="mt-4 font-mono text-xs text-sap-300">Read posts ↗</p>
+          </a>
+
+          <a
+            href="https://mrkishore.wordpress.com/"
+            target="_blank"
+            rel="noopener"
+            class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]"
+          >
+            <p class="font-mono text-xs uppercase tracking-wider text-sap-300">Personal blog</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">mrkishore.wordpress.com</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Older long-form: SAPUI5 UX, Connectivity 4.0, Android PhoneGap plugins for UI5
+              Mobile.
+            </p>
+            <p class="mt-4 font-mono text-xs text-sap-300">Browse archive ↗</p>
+          </a>
+
+          <a
+            href="https://www.amazon.com/author/kishorekumar"
+            target="_blank"
+            rel="noopener"
+            class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]"
+          >
+            <p class="font-mono text-xs uppercase tracking-wider text-sap-300">Amazon Author</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Author page</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              <em>One Step Closer: Chapter One of My Life</em> — and the rest as it’s written.
+            </p>
+            <p class="mt-4 font-mono text-xs text-sap-300">View on Amazon ↗</p>
+          </a>
+        </div>
+
+        <div class="mt-10">
+          <p class="mb-4 font-mono text-xs uppercase tracking-widest text-slate-500">Selected pieces</p>
+          <ul class="grid gap-3 sm:grid-cols-2">
+            <li class="rounded-md border border-white/5 bg-white/[0.02] px-4 py-3 text-sm text-slate-300">Is there Connectivity 4.0?</li>
+            <li class="rounded-md border border-white/5 bg-white/[0.02] px-4 py-3 text-sm text-slate-300">Flexible User Experience with SAPUI5</li>
+            <li class="rounded-md border border-white/5 bg-white/[0.02] px-4 py-3 text-sm text-slate-300">How to create an Android PhoneGap plugin for UI5 Mobile</li>
+            <li class="rounded-md border border-white/5 bg-white/[0.02] px-4 py-3 text-sm text-slate-300">A Millennial’s Perspective: Pursue Purpose Relentlessly — and Forever</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SPEAKING & MEDIA -->
+      <section id="speaking" class="border-t border-white/5 py-20">
+        <div class="mb-10">
+          <p class="font-mono text-xs uppercase tracking-widest text-sap-300">05 — Speaking &amp; Media</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white">Talks, podcasts &amp; keynote bylines</h2>
+          <p class="mt-2 max-w-2xl text-slate-400">
+            Where the work shows up outside the platform — conference stages, podcast feeds,
+            and the SAP CTO's keynote pages.
+          </p>
+        </div>
+
+        <!-- Featured talk: DevDays 2019 video embed -->
+        <div class="mb-10 overflow-hidden rounded-xl border border-white/10 bg-white/[0.02]">
+          <div class="aspect-video w-full">
+            <iframe
+              class="h-full w-full"
+              src="https://www.youtube-nocookie.com/embed/eO8gpZyuisg?start=48"
+              title="Kishore Kumar Vivekanandan — SAP OpenUI5 · DevDays 2019 Amsterdam"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="flex flex-wrap items-start justify-between gap-4 p-6">
+            <div>
+              <p class="font-mono text-xs uppercase tracking-wider text-sap-300">DevDays 2019 · Amsterdam · Keynote</p>
+              <h3 class="mt-2 text-lg font-semibold text-white">SAP OpenUI5 at the largest healthcare developer conference</h3>
+              <p class="mt-2 max-w-2xl text-sm text-slate-400">
+                Speaker at DevDays 2019 — sharing how SAP's open-source UI framework powers
+                connected healthcare experiences for hospitals.
+              </p>
+            </div>
+            <a
+              href="https://www.devdays.com/wp-content/uploads/2021/12/Kishore-Kumar-Vivekanandan-SAP-OpenUI5-_-DevDays-2019-Amsterdam-1.pdf"
+              target="_blank"
+              rel="noopener"
+              class="rounded-md border border-white/10 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-white/5"
+              >Slides (PDF) ↗</a
+            >
+          </div>
+        </div>
+
+        <!-- Other talks & media: cards grid -->
+        <div class="grid gap-5 md:grid-cols-2">
+          <!-- TechEd 2025 -->
+          <a
+            href="https://www.sap.com/events/teched/berlin/flow/sap/te25/catalog-inperson/page/catalog/session/1749034834075001U5Gu"
+            target="_blank"
+            rel="noopener"
+            class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]"
+          >
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-md bg-sap-400/10 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-sap-300">Conference</span>
+              <span class="font-mono text-xs text-slate-500">SAP TechEd 2025</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">BTP Agent — MCP &amp; Knowledge Graph for BTP Admin</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Deep-dive at SAP TechEd 2025 Berlin on Model Context Protocol enablement and a
+              Knowledge Graph for BTP Administration — the architecture aimed at 10×'ing
+              administrator productivity.
+            </p>
+            <p class="mt-4 font-mono text-xs text-sap-300">View session ↗</p>
+          </a>
+
+          <!-- Podcast -->
+          <a
+            href="https://podcasts.apple.com/us/podcast/episode-114-configure-and-manage-btp-landscape-with/id990578446?i=1000703052160"
+            target="_blank"
+            rel="noopener"
+            class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]"
+          >
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-md bg-sap-400/10 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-sap-300">Podcast</span>
+              <span class="font-mono text-xs text-slate-500">Episode 114</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">Configure &amp; Manage the BTP Landscape</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Direct customer interactions, positioning SAP's AI investment to meet customer
+              demand, and co-innovating with BETA customers on Joule adoption.
+            </p>
+            <p class="mt-4 font-mono text-xs text-sap-300">Listen on Apple Podcasts ↗</p>
+          </a>
+
+          <!-- TechEd 2023 keynote highlights -->
+          <a
+            href="https://community.sap.com/t5/technology-blogs-by-sap/sap-teched-2023-executive-keynote-highlights/ba-p/13576476"
+            target="_blank"
+            rel="noopener"
+            class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]"
+          >
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-md bg-sap-400/10 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-sap-300">CTO Keynote</span>
+              <span class="font-mono text-xs text-slate-500">SAP TechEd 2023</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">TechEd 2023 — Executive Keynote Highlights</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Co-authored byline on SAP Community communicating SAP's technology vision from
+              the executive keynote stage.
+            </p>
+            <p class="mt-4 font-mono text-xs text-sap-300">Read on SAP Community ↗</p>
+          </a>
+
+          <!-- Sapphire 2023 keynote highlights -->
+          <a
+            href="https://community.sap.com/t5/technology-blogs-by-sap/sapphire-2023-future-proof-innovation-keynote-highlights/ba-p/13556397"
+            target="_blank"
+            rel="noopener"
+            class="group rounded-xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-sap-400/40 hover:bg-white/[0.04]"
+          >
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-md bg-sap-400/10 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-sap-300">CTO Keynote</span>
+              <span class="font-mono text-xs text-slate-500">SAP Sapphire 2023</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">Sapphire 2023 — Future-Proof Innovation</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Keynote highlights byline framing the year's "future-proof innovation" narrative
+              for a broad enterprise audience.
+            </p>
+            <p class="mt-4 font-mono text-xs text-sap-300">Read on SAP Community ↗</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- SKILLS / CERTIFICATIONS -->
+      <section id="skills" class="border-t border-white/5 py-20">
+        <div class="grid gap-12 md:grid-cols-3">
+          <div>
+            <p class="font-mono text-xs uppercase tracking-widest text-sap-300">06 — Skills</p>
+            <h2 class="mt-2 text-3xl font-semibold text-white">What I work with</h2>
+          </div>
+          <div class="md:col-span-2">
+            <p class="mb-3 font-mono text-xs uppercase tracking-widest text-slate-500">Top skills</p>
+            <div class="mb-8 flex flex-wrap gap-2">
+              <span class="rounded-full border border-sap-400/30 bg-sap-400/10 px-3 py-1 text-sm text-sap-300">Product Management</span>
+              <span class="rounded-full border border-sap-400/30 bg-sap-400/10 px-3 py-1 text-sm text-sap-300">Artificial Intelligence (AI)</span>
+              <span class="rounded-full border border-sap-400/30 bg-sap-400/10 px-3 py-1 text-sm text-sap-300">People Management</span>
+            </div>
+
+            <p class="mb-3 font-mono text-xs uppercase tracking-widest text-slate-500">Stack &amp; domains</p>
+            <div class="mb-8 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">SAP BTP</span>
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">Cloud Foundry</span>
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">SAP HANA</span>
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">SAPUI5 / Fiori</span>
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">Generative AI</span>
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">Neural Networks</span>
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">ABAP</span>
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">oData</span>
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">Scrum</span>
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm text-slate-300">IoT</span>
+            </div>
+
+            <p class="mb-3 font-mono text-xs uppercase tracking-widest text-slate-500">Certifications</p>
+            <ul class="grid gap-2 sm:grid-cols-2">
+              <li class="rounded-md border border-white/5 bg-white/[0.02] px-4 py-2.5 text-sm text-slate-300">Enterprise Machine Learning in a Nutshell</li>
+              <li class="rounded-md border border-white/5 bg-white/[0.02] px-4 py-2.5 text-sm text-slate-300">Next Steps in Software Development on SAP HANA</li>
+              <li class="rounded-md border border-white/5 bg-white/[0.02] px-4 py-2.5 text-sm text-slate-300">Semantic Web Technology</li>
+              <li class="rounded-md border border-white/5 bg-white/[0.02] px-4 py-2.5 text-sm text-slate-300">SAP’s UX Strategy</li>
+              <li class="rounded-md border border-white/5 bg-white/[0.02] px-4 py-2.5 text-sm text-slate-300 sm:col-span-2">Building Applications with SAP Cloud Application Programming Model</li>
+            </ul>
+
+            <p class="mt-8 mb-3 font-mono text-xs uppercase tracking-widest text-slate-500">Languages</p>
+            <p class="text-sm text-slate-300">
+              English <span class="text-slate-500">— full professional</span> · Tamil
+              <span class="text-slate-500">— native</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AWARDS -->
+      <section id="awards" class="border-t border-white/5 py-20">
+        <div class="mb-10">
+          <p class="font-mono text-xs uppercase tracking-widest text-sap-300">07 — Recognition</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white">Awards &amp; honours</h2>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-xl border border-white/10 bg-gradient-to-br from-sap-400/10 to-transparent p-6">
+            <p class="font-mono text-xs uppercase tracking-wider text-sap-300">World Record</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Guinness Record Holder</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Participated in the world’s largest coding marathon — #WindowsAppFest.
+            </p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+            <p class="font-mono text-xs uppercase tracking-wider text-sap-300">SAP</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">5× SAP Catalyst</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Five-time recipient of SAP’s Catalyst recognition for impact and innovation.
+            </p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+            <p class="font-mono text-xs uppercase tracking-wider text-sap-300">SAP</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Fast Track Employee</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Recognised on SAP’s accelerated growth track for early-career engineers.
+            </p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+            <p class="font-mono text-xs uppercase tracking-wider text-sap-300">SAP.iO</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Intrapreneurship Mentor</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Seven+ years coaching social-impact ventures inside SAP.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="border-t border-white/5 py-20">
+        <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-sap-400/10 via-white/[0.02] to-transparent p-10">
+          <p class="font-mono text-xs uppercase tracking-widest text-sap-300">08 — Contact</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white sm:text-4xl">Let’s talk.</h2>
+          <p class="mt-3 max-w-2xl text-slate-300">
+            I read everything that lands in my LinkedIn inbox. If you’re working on something in
+            BTP, AI for enterprise platforms, intrapreneurship, or just want to compare notes on
+            engineering leadership — say hello.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="https://www.linkedin.com/in/mrkishore"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 rounded-md bg-sap-400 px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-sap-500"
+            >
+              Message on LinkedIn ↗
+            </a>
+            <a
+              href="https://mrkishore.medium.com/"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 rounded-md border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5"
+            >
+              Read on Medium ↗
+            </a>
+            <a
+              href="https://mrkishore.wordpress.com/"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 rounded-md border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5"
+            >
+              Personal blog ↗
+            </a>
+            <a
+              href="https://www.amazon.com/author/kishorekumar"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 rounded-md border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5"
+            >
+              Amazon Author ↗
+            </a>
+          </div>
+
+          <!-- Meeting request form. Posts JSON to /api/contact, which mails the
+               submission with a tagged subject so it filters cleanly in Outlook.
+               The honeypot field below traps the bots that auto-fill every input. -->
+          <div class="mt-12 border-t border-white/10 pt-10">
+            <h3 class="text-xl font-semibold text-white">Or request a meeting</h3>
+            <p class="mt-2 max-w-2xl text-sm text-slate-400">
+              Drop a few details and I'll reply with a time. Goes straight to my work inbox
+              with a tagged subject so it doesn't get lost.
+            </p>
+
+            <form id="contact-form" class="mt-6 grid gap-4 sm:grid-cols-2" novalidate>
+              <label class="block">
+                <span class="mb-1 block text-xs font-medium uppercase tracking-wider text-slate-400">Name</span>
+                <input
+                  required
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="100"
+                  class="w-full rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-sap-400 focus:outline-none focus:ring-1 focus:ring-sap-400"
+                  placeholder="Your name"
+                />
+              </label>
+              <label class="block">
+                <span class="mb-1 block text-xs font-medium uppercase tracking-wider text-slate-400">Email</span>
+                <input
+                  required
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="200"
+                  class="w-full rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-sap-400 focus:outline-none focus:ring-1 focus:ring-sap-400"
+                  placeholder="you@company.com"
+                />
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="mb-1 block text-xs font-medium uppercase tracking-wider text-slate-400">Topic</span>
+                <input
+                  required
+                  name="topic"
+                  type="text"
+                  maxlength="200"
+                  class="w-full rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-sap-400 focus:outline-none focus:ring-1 focus:ring-sap-400"
+                  placeholder="One line on what you'd like to discuss"
+                />
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="mb-1 block text-xs font-medium uppercase tracking-wider text-slate-400">Proposed time <span class="text-slate-500">(optional, your local time)</span></span>
+                <div class="grid gap-3 sm:grid-cols-[2fr_1fr]">
+                  <input
+                    id="contact-when"
+                    name="when"
+                    type="datetime-local"
+                    step="900"
+                    class="w-full rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-sap-400 focus:outline-none focus:ring-1 focus:ring-sap-400 [color-scheme:dark]"
+                  />
+                  <select
+                    name="duration"
+                    aria-label="Duration"
+                    class="w-full rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm text-slate-100 focus:border-sap-400 focus:outline-none focus:ring-1 focus:ring-sap-400 [color-scheme:dark]"
+                  >
+                    <option value="15">15 min</option>
+                    <option value="30" selected>30 min</option>
+                    <option value="45">45 min</option>
+                    <option value="60">60 min</option>
+                    <option value="90">90 min</option>
+                  </select>
+                </div>
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="mb-1 block text-xs font-medium uppercase tracking-wider text-slate-400">Message <span class="text-slate-500">(optional)</span></span>
+                <textarea
+                  name="message"
+                  rows="4"
+                  maxlength="2000"
+                  class="w-full rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-sap-400 focus:outline-none focus:ring-1 focus:ring-sap-400"
+                  placeholder="Anything else helpful before we meet"
+                ></textarea>
+              </label>
+
+              <!-- Honeypot: hidden from humans (incl. assistive tech via aria-hidden + tabindex)
+                   but visible to dumb bots that fill every input. -->
+              <div aria-hidden="true" class="hidden">
+                <label>
+                  Website
+                  <input name="website" type="text" tabindex="-1" autocomplete="off" />
+                </label>
+              </div>
+
+              <div class="sm:col-span-2 flex flex-wrap items-center gap-4">
+                <button
+                  type="submit"
+                  class="inline-flex items-center gap-2 rounded-md bg-sap-400 px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-sap-500 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  <span data-label="idle">Send request</span>
+                  <span data-label="busy" class="hidden">Sending…</span>
+                </button>
+                <p id="contact-status" role="status" aria-live="polite" class="text-sm text-slate-400"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-10">
+      <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-6 text-xs text-slate-500 sm:flex-row sm:items-center">
+        <p>© Kishore Kumar Vivekanandan. Views are my own.</p>
+        <p class="font-mono">Built &amp; deployed on SAP BTP Cloud Foundry.</p>
+      </div>
+    </footer>
+
+    <!-- Runtime config: must load before the form-handler script below so
+         window.PORTFOLIO_CONFIG.BACKEND_URL is defined when the form fires. -->
+    <script src="config.js"></script>
+    <script>
+      // Contact form: serialize to JSON, post to /api/contact, surface status.
+      // Server is the source of truth for validation and rate-limiting; the
+      // client just disables the submit button and reports success/failure.
+      (function () {
+        const form = document.getElementById('contact-form');
+        if (!form) return;
+        const status = document.getElementById('contact-status');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const idleLabel = submitBtn.querySelector('[data-label="idle"]');
+        const busyLabel = submitBtn.querySelector('[data-label="busy"]');
+
+        // Pin the datetime picker's earliest selectable slot to "now" rounded
+        // up to the next quarter-hour. Done client-side so we don't have to
+        // redeploy daily; the server still validates server-side time itself
+        // would be the source of truth if abuse ever happens.
+        const whenInput = document.getElementById('contact-when');
+        if (whenInput) {
+          const now = new Date();
+          now.setMinutes(Math.ceil(now.getMinutes() / 15) * 15, 0, 0);
+          const pad = n => String(n).padStart(2, '0');
+          whenInput.min = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}T${pad(now.getHours())}:${pad(now.getMinutes())}`;
+        }
+
+        function setBusy(isBusy) {
+          submitBtn.disabled = isBusy;
+          idleLabel.classList.toggle('hidden', isBusy);
+          busyLabel.classList.toggle('hidden', !isBusy);
+        }
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          status.textContent = '';
+          status.className = 'text-sm text-slate-400';
+
+          const data = Object.fromEntries(new FormData(form).entries());
+          setBusy(true);
+          try {
+            // BACKEND_URL is set in config.js. Empty string falls back to
+            // same-origin (useful when running the backend locally and pointing
+            // a browser at http://localhost:3000).
+            const backend = (window.PORTFOLIO_CONFIG && window.PORTFOLIO_CONFIG.BACKEND_URL) || '';
+            const res = await fetch(backend + '/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data),
+            });
+            const json = await res.json().catch(() => ({}));
+            if (res.ok && json.ok) {
+              status.textContent = 'Sent — I’ll get back to you soon.';
+              status.className = 'text-sm text-emerald-400';
+              form.reset();
+            } else {
+              status.textContent = json.error || 'Something went wrong. Try LinkedIn for now.';
+              status.className = 'text-sm text-rose-400';
+            }
+          } catch (err) {
+            status.textContent = 'Network error. Try LinkedIn for now.';
+            status.className = 'text-sm text-rose-400';
+          } finally {
+            setBusy(false);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
