@@ -888,6 +888,16 @@
           status.className = 'text-sm text-slate-400';
 
           const data = Object.fromEntries(new FormData(form).entries());
+          // Capture the visitor's timezone (e.g. "Europe/Berlin",
+          // "America/Los_Angeles") so the backend can stamp the .ics with a
+          // real TZID. Without this, Outlook treats the proposed time as
+          // floating/UTC and shifts it to the recipient's local timezone.
+          try {
+            data.tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+          } catch (_) {
+            // Old browsers without Intl support — leave tz blank, server
+            // falls back to floating time.
+          }
           setBusy(true);
           try {
             // BACKEND_URL is set in config.js. Empty string falls back to
