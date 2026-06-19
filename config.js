@@ -9,4 +9,7 @@
 // it sets a global on window. No build step.
 window.PORTFOLIO_CONFIG = {
   BACKEND_URL: 'https://kishore-kumar.cfapps.us10.hana.ondemand.com',
+  // Cloudflare Turnstile site key. Public — safe to commit. The matching
+  // secret key lives only on the backend (TURNSTILE_SECRET env var).
+  TURNSTILE_SITE_KEY: '0x4AAAAAADnrhC8FpeCxzM4l',
 };

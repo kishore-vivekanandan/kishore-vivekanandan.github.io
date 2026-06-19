@@ -795,6 +795,16 @@
               </div>
 
               <div class="sm:col-span-2 flex flex-wrap items-center gap-4">
+                <!-- Cloudflare Turnstile renders here. The widget injects a
+                     hidden input named cf-turnstile-response which serializes
+                     with the rest of the form. data-sitekey is read at runtime
+                     from config.js so the key isn't duplicated. data-theme
+                     keeps it on-brand against the dark page. -->
+                <div
+                  id="cf-turnstile"
+                  class="cf-turnstile"
+                  data-theme="dark"
+                ></div>
                 <button
                   type="submit"
                   class="inline-flex items-center gap-2 rounded-md bg-sap-400 px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-sap-500 disabled:cursor-not-allowed disabled:opacity-60"
@@ -820,6 +830,28 @@
     <!-- Runtime config: must load before the form-handler script below so
          window.PORTFOLIO_CONFIG.BACKEND_URL is defined when the form fires. -->
     <script src="config.js"></script>
+    <!-- Cloudflare Turnstile (bot challenge). Renders the widget inside any
+         element with class="cf-turnstile" once the script loads. async +
+         defer so it doesn't block first paint. -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+      // Wire the site key into the Turnstile widget after config.js loads.
+      // We do this in JS rather than hardcoding the key in HTML so config.js
+      // remains the single source of truth across local dev and prod.
+      (function () {
+        const widget = document.getElementById('cf-turnstile');
+        if (!widget) return;
+        const cfg = window.PORTFOLIO_CONFIG || {};
+        if (cfg.TURNSTILE_SITE_KEY) {
+          widget.setAttribute('data-sitekey', cfg.TURNSTILE_SITE_KEY);
+        } else {
+          // No site key configured (e.g. local dev without one) — hide the
+          // widget rather than rendering a broken one. Backend falls back to
+          // honeypot-only in this case too.
+          widget.style.display = 'none';
+        }
+      })();
+    </script>
     <script>
       // Contact form: serialize to JSON, post to /api/contact, surface status.
       // Server is the source of truth for validation and rate-limiting; the
