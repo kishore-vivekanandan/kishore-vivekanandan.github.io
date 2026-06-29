@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Verification + SEO meta — same tokens / values as the homepage so
+         Search Console treats this as part of the same property. -->
+    <meta name="google-site-verification" content="fWC2XA0ZMN7xIrFsWZLqjj2UqzHR5UimqE9szqCZWYw" />
+
+    <title>Books — Kishore Kumar Vivekanandan</title>
+    <meta
+      name="description"
+      content="What I'm reading now and the books that shaped how I think about engineering leadership, technology, and the world. Curated by Kishore Kumar Vivekanandan."
+    />
+    <meta name="author" content="Kishore Kumar Vivekanandan" />
+
+    <link rel="canonical" href="https://kishore-vivekanandan.github.io/books.html" />
+
+    <!-- Open Graph + Twitter mirror the homepage shell but with a books-specific
+         title/description. og:image stays as the headshot so shared links still
+         look right; a books page sharing a Tesla wheel cover image would
+         confuse the preview. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kishore Kumar Vivekanandan" />
+    <meta property="og:url" content="https://kishore-vivekanandan.github.io/books.html" />
+    <meta property="og:title" content="Books — Kishore Kumar Vivekanandan" />
+    <meta
+      property="og:description"
+      content="What I'm reading now and the books that shaped how I think about engineering leadership, technology, and the world."
+    />
+    <meta property="og:image" content="https://kishore-vivekanandan.github.io/resources/kishore-kumar.jpeg" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Books — Kishore Kumar Vivekanandan" />
+    <meta
+      name="twitter:description"
+      content="What I'm reading now and the books that shaped how I think about engineering leadership, technology, and the world."
+    />
+    <meta name="twitter:image" content="https://kishore-vivekanandan.github.io/resources/kishore-kumar.jpeg" />
+
+    <!-- Favicons (same set as homepage) -->
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/icons/icon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/icons/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/icons/icon-180.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+            },
+            colors: {
+              ink: { 900: '#0b1220', 800: '#0f172a', 700: '#1e293b', 600: '#334155' },
+              sap: { 500: '#0a6ed1', 400: '#0070f2', 300: '#3b9ff7' },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body {
+        background:
+          radial-gradient(1100px 600px at 80% -10%, rgba(10, 110, 209, 0.18), transparent 60%),
+          radial-gradient(900px 500px at -10% 30%, rgba(10, 110, 209, 0.10), transparent 60%),
+          #0b1220;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-slate-200 antialiased">
+    <!-- Top nav — mirrors the homepage. Anchor links jump to homepage sections;
+         "Books" is highlighted as the active page. -->
+    <header class="sticky top-0 z-30 border-b border-white/5 bg-ink-900/70 backdrop-blur">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a href="index.html" class="flex items-center gap-2 text-sm font-semibold tracking-tight text-white">
+          <span class="grid h-7 w-7 place-items-center rounded-md bg-sap-400 font-mono text-xs font-bold text-white">KK</span>
+          <span>Kishore Kumar</span>
+        </a>
+        <ul class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+          <li><a href="index.html#about" class="hover:text-white">About</a></li>
+          <li><a href="index.html#work" class="hover:text-white">Work</a></li>
+          <li><a href="index.html#experience" class="hover:text-white">Experience</a></li>
+          <li><a href="index.html#writing" class="hover:text-white">Writing</a></li>
+          <li><a href="index.html#speaking" class="hover:text-white">Speaking</a></li>
+          <li><a href="books.html" class="text-white">Books</a></li>
+          <li><a href="index.html#awards" class="hover:text-white">Awards</a></li>
+          <li><a href="index.html#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+        <a
+          href="index.html#contact"
+          class="hidden rounded-md bg-sap-400 px-3.5 py-2 text-sm font-medium text-white shadow-sm hover:bg-sap-500 md:inline-block"
+          >Get in touch</a
+        >
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-6">
+      <!-- HERO -->
+      <section class="pt-20 pb-12 sm:pt-28">
+        <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-sap-400/30 bg-sap-400/10 px-3 py-1 font-mono text-xs text-sap-300">
+          <span class="h-1.5 w-1.5 rounded-full bg-sap-300"></span>
+          Reading list
+        </p>
+        <h1 class="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+          Books
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+          What I'm reading now and the books that shaped how I think about
+          engineering leadership, technology, and the world. Not a syllabus —
+          a snapshot.
+        </p>
+      </section>
+
+      <!-- NOW READING -->
+      <section id="now-reading" class="border-t border-white/5 py-16">
+        <div class="mb-10">
+          <p class="font-mono text-xs uppercase tracking-widest text-sap-300">Now reading</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white">What's on the nightstand</h2>
+        </div>
+
+        <ul class="space-y-8">
+          <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
+            <a
+              href="https://www.amazon.de/-/en/Joseph-Yang-ebook/dp/B0GGCB29QB"
+              target="_blank"
+              rel="noopener"
+              class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40"
+            >
+              <img
+                src="resources/books/byd.jpg"
+                alt="Cover of BYD — Portrait of a Chinese Conglomerate by Joseph Yang"
+                loading="lazy"
+                class="block h-auto w-full"
+              />
+            </a>
+            <div>
+              <h3 class="text-lg font-semibold leading-snug text-white sm:text-xl">
+                BYD — Portrait of a Chinese Conglomerate
+              </h3>
+              <p class="mt-1 text-sm text-slate-400">Joseph Yang</p>
+              <p class="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
+                How a rural-poverty chemist built a battery maker into the
+                company that dethroned Tesla — and what vertical integration,
+                the Blade Battery, and a clone of the Toyota Corolla had to do
+                with it.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- WHAT SHAPED ME — placeholder for now -->
+      <section id="what-shaped-me" class="border-t border-white/5 py-16">
+        <div class="mb-10">
+          <p class="font-mono text-xs uppercase tracking-widest text-sap-300">What shaped me</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white">The longer list</h2>
+          <p class="mt-3 max-w-2xl text-slate-400">
+            Coming soon — a curated set of books that meaningfully changed how
+            I think. Building this with care; I'd rather have ten honest
+            recommendations than thirty bookshelf ornaments.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-10">
+      <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-6 text-xs text-slate-500 sm:flex-row sm:items-center">
+        <p>© Kishore Kumar Vivekanandan. Views are my own.</p>
+        <p class="font-mono"><a href="index.html" class="hover:text-slate-300">← Back to portfolio</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
