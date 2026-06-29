@@ -161,11 +161,12 @@
         </ul>
       </section>
 
-      <!-- WHAT SHAPED ME — 21 books grouped into four lenses. 3-column grid
-           on desktop (2 on tablet, 1 on mobile). Each tile: cover on top,
-           title + author + one-sentence take below. Cover links to Amazon. -->
+      <!-- WHAT SHAPED ME — 21 books, BYD-style rows (cover left, text right).
+           Filter tabs let visitors narrow to one category instead of scrolling
+           past everything. The category groupings are also kept as section
+           headings so the "All" view still has structure. -->
       <section id="what-shaped-me" class="border-t border-white/5 py-16">
-        <div class="mb-12">
+        <div class="mb-10">
           <p class="font-mono text-xs uppercase tracking-widest text-sap-300">What shaped me</p>
           <h2 class="mt-2 text-3xl font-semibold text-white">The longer list</h2>
           <p class="mt-3 max-w-2xl text-slate-400">
@@ -175,240 +176,294 @@
           </p>
         </div>
 
+        <!-- Filter tabs. Each button has a data-filter value matching one of
+             the categories (or 'all'). The script at the bottom of the page
+             listens for clicks, marks the active button, and toggles the
+             hidden state on each category block. -->
+        <div id="book-filters" class="mb-10 flex flex-wrap gap-2 border-y border-white/5 py-4" role="tablist" aria-label="Filter books by category">
+          <button type="button" data-filter="all" class="rounded-full border border-sap-400/40 bg-sap-400/10 px-4 py-1.5 font-mono text-xs uppercase tracking-wider text-sap-300 transition" aria-pressed="true">All</button>
+          <button type="button" data-filter="leadership" class="rounded-full border border-white/10 bg-white/[0.02] px-4 py-1.5 font-mono text-xs uppercase tracking-wider text-slate-400 transition hover:border-white/30 hover:text-slate-200" aria-pressed="false">Leadership &amp; teams</button>
+          <button type="button" data-filter="mindset" class="rounded-full border border-white/10 bg-white/[0.02] px-4 py-1.5 font-mono text-xs uppercase tracking-wider text-slate-400 transition hover:border-white/30 hover:text-slate-200" aria-pressed="false">How to think</button>
+          <button type="button" data-filter="building" class="rounded-full border border-white/10 bg-white/[0.02] px-4 py-1.5 font-mono text-xs uppercase tracking-wider text-slate-400 transition hover:border-white/30 hover:text-slate-200" aria-pressed="false">Building</button>
+          <button type="button" data-filter="life" class="rounded-full border border-white/10 bg-white/[0.02] px-4 py-1.5 font-mono text-xs uppercase tracking-wider text-slate-400 transition hover:border-white/30 hover:text-slate-200" aria-pressed="false">Living, losing</button>
+        </div>
+
         <!-- ─── Leadership & teams ─── -->
-        <div class="mb-14">
+        <div data-category="leadership" class="mb-14">
           <h3 class="mb-6 font-mono text-xs uppercase tracking-widest text-slate-400">Leadership &amp; teams</h3>
-          <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <li>
+          <ul class="space-y-8">
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B07DXGGDCQ" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/making-of-a-manager.jpg" alt="Cover of The Making of a Manager" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">The Making of a Manager</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Julie Zhuo</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                The book I wish existed when I was promoted into management for the first time.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">The Making of a Manager</h4>
+                <p class="mt-1 text-sm text-slate-400">Julie Zhuo</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  The book I wish existed when I was promoted from senior engineer to first-time manager — Facebook's design VP on what to actually do in your first 90 days, and the years after.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B00DQ845EA" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/hard-thing-about-hard-things.jpg" alt="Cover of The Hard Thing About Hard Things" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">The Hard Thing About Hard Things</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Ben Horowitz</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Honest about the calls — layoffs, no-good-answer days — that most leadership books edit out.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">The Hard Thing About Hard Things</h4>
+                <p class="mt-1 text-sm text-slate-400">Ben Horowitz</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Honest in a way most business books refuse to be — what it feels like to lay people off, make calls with no good answer, and run a company that might not survive the quarter.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B082261K3F" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/no-rules-rules.jpg" alt="Cover of No Rules Rules" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">No Rules Rules</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Reed Hastings &amp; Erin Meyer</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                How Netflix runs on talent density and radical candor instead of policies.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">No Rules Rules</h4>
+                <p class="mt-1 text-sm text-slate-400">Reed Hastings &amp; Erin Meyer</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  How Netflix runs without performance reviews, vacation policies, or expense rules — and why "talent density plus radical candor" is the bet underneath all of it.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B08VWFW56N" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/play-nice-but-win.jpg" alt="Cover of Play Nice but Win" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Play Nice But Win</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Michael Dell</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Taking Dell private — long-horizon strategy while Wall Street screamed at the door.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Play Nice But Win</h4>
+                <p class="mt-1 text-sm text-slate-400">Michael Dell</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  The taking-Dell-private playbook, told by the founder — a masterclass in long-horizon strategic patience while activist investors and Wall Street are screaming at the door.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B00505RVPW" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/onward.jpg" alt="Cover of Onward" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Onward</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Howard Schultz with Joanne Gordon</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Schultz returns to Starbucks — the most useful turnaround memoir I've read.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Onward</h4>
+                <p class="mt-1 text-sm text-slate-400">Howard Schultz with Joanne Gordon</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Schultz's return to Starbucks and the year of unsentimental decisions it took to bring the company back from over-expansion — the most useful "turnaround" memoir I've read.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B08Z3K2T67" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/my-life-in-full.jpg" alt="Cover of My Life in Full" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">My Life in Full</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Indra Nooyi</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Running PepsiCo while raising a family — candid about what the trade-offs actually cost.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">My Life in Full</h4>
+                <p class="mt-1 text-sm text-slate-400">Indra Nooyi</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Former PepsiCo CEO on doing the work and what it actually costs — the most candid book I've read about the trade-offs of running a global company while raising a family.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B09QMWLZC8" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/maverick-effect.jpg" alt="Cover of The Maverick Effect" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">The Maverick Effect</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Harish Mehta</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                How a small group of founders built NASSCOM and the Indian IT industry from nothing.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">The Maverick Effect</h4>
+                <p class="mt-1 text-sm text-slate-400">Harish Mehta</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  The inside story of how a small group of Indian software founders built NASSCOM and an entire IT industry from nothing — by people who lived it.
+                </p>
+              </div>
             </li>
           </ul>
         </div>
 
         <!-- ─── How to think, how to act ─── -->
-        <div class="mb-14">
+        <div data-category="mindset" class="mb-14">
           <h3 class="mb-6 font-mono text-xs uppercase tracking-widest text-slate-400">How to think, how to act</h3>
-          <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <li>
+          <ul class="space-y-8">
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B005VSRFEA" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/thinking-in-systems.jpg" alt="Cover of Thinking in Systems" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Thinking in Systems</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Donella H. Meadows</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Seeing the world as feedback loops, not discrete events — changes how you debug organizations.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Thinking in Systems: A Primer</h4>
+                <p class="mt-1 text-sm text-slate-400">Donella H. Meadows</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  The shortest, clearest introduction to seeing the world as feedback loops rather than discrete events. Changes how you debug organizations as much as software.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B0076O2VMI" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/righteous-mind.jpg" alt="Cover of The Righteous Mind" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">The Righteous Mind</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Jonathan Haidt</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                The clearest framework I've found for why reasonable people talk past each other.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">The Righteous Mind</h4>
+                <p class="mt-1 text-sm text-slate-400">Jonathan Haidt</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Why reasonable people violently disagree about politics and religion — Haidt's "moral foundations" framework is the most useful lens I've found for understanding why teams talk past each other.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B084HJSJJ2" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/psychology-of-money.jpg" alt="Cover of The Psychology of Money" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">The Psychology of Money</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Morgan Housel</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Twenty short essays on human nature, wearing a finance disguise.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">The Psychology of Money</h4>
+                <p class="mt-1 text-sm text-slate-400">Morgan Housel</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Twenty short essays on how people actually behave with money — less a finance book than a study of human nature wearing a finance disguise.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B014DUR7L2" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/never-split-the-difference.jpg" alt="Cover of Never Split the Difference" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Never Split the Difference</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Chris Voss with Tahl Raz</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                FBI negotiation techniques — for every meeting where the real decision is being avoided.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Never Split the Difference</h4>
+                <p class="mt-1 text-sm text-slate-400">Chris Voss with Tahl Raz</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  A former FBI hostage negotiator on the techniques that actually move stuck conversations. Reframed how I think about every meeting where a decision is being avoided.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B0C2BW79WV" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/be-useful.jpg" alt="Cover of Be Useful" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Be Useful</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Arnold Schwarzenegger</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Seven blunt rules for getting things done, from someone who has started from nothing repeatedly.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Be Useful</h4>
+                <p class="mt-1 text-sm text-slate-400">Arnold Schwarzenegger</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Seven blunt rules for getting things done from someone who has, repeatedly, started from nothing in unrelated fields. The most underrated life-advice book of recent years.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B00755MHV8" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/startup-of-you.jpg" alt="Cover of The Startup of You" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">The Startup of You</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Reid Hoffman &amp; Ben Casnocha</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Run your career the way a founder runs a company — permanent beta.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">The Startup of You</h4>
+                <p class="mt-1 text-sm text-slate-400">Reid Hoffman &amp; Ben Casnocha</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Run your career the way a founder runs a company: permanent beta, iterative pivots, real investments in your network. Still the cleanest articulation of this idea.
+                </p>
+              </div>
             </li>
           </ul>
         </div>
 
         <!-- ─── The arc of building something ─── -->
-        <div class="mb-14">
+        <div data-category="building" class="mb-14">
           <h3 class="mb-6 font-mono text-xs uppercase tracking-widest text-slate-400">The arc of building something</h3>
-          <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <li>
+          <ul class="space-y-8">
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B0176M1A44" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/shoe-dog.jpg" alt="Cover of Shoe Dog" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Shoe Dog</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Phil Knight</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Nike's messy, almost-bankrupt first decades — startup mythology with the polish off.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Shoe Dog</h4>
+                <p class="mt-1 text-sm text-slate-400">Phil Knight</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Nike's founder on the messy, almost-bankrupt first two decades — the version of company-building that startup mythology usually edits out.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B00KHX0II4" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/zero-to-one.jpg" alt="Cover of Zero to One" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Zero to One</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Peter Thiel with Blake Masters</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                Only going from zero to one creates real value — a short book that reorders how you see "innovation".
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Zero to One</h4>
+                <p class="mt-1 text-sm text-slate-400">Peter Thiel with Blake Masters</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Going from one to N is easier than going from zero to one — and only the latter creates real value. A short book that reorders how you evaluate "innovation".
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B0BSPQVX24" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/coming-wave.jpg" alt="Cover of The Coming Wave" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">The Coming Wave</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Mustafa Suleyman with Michael Bhaskar</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                DeepMind's co-founder on why this AI wave is fundamentally different — and the containment problem.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">The Coming Wave</h4>
+                <p class="mt-1 text-sm text-slate-400">Mustafa Suleyman with Michael Bhaskar</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  DeepMind co-founder on AI, synthetic biology, and the containment problem — a clear-eyed argument that this wave is fundamentally different from prior tech revolutions.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B0D886ZQHY" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/superagency.jpg" alt="Cover of Superagency" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Superagency</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Reid Hoffman &amp; Greg Beato</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                The optimist's case for AI — specific about what individual humans gain. A useful counterweight to Suleyman.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Superagency</h4>
+                <p class="mt-1 text-sm text-slate-400">Reid Hoffman &amp; Greg Beato</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  The optimist's case for AI — not utopian, but specific about what individual humans gain when the tools get this capable. A useful counterweight to Suleyman.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B01CZBH3Z6" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/permissionless-innovation.jpg" alt="Cover of Permissionless Innovation" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Permissionless Innovation</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Adam Thierer</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                The case for letting new technologies exist before deciding how to regulate them.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Permissionless Innovation</h4>
+                <p class="mt-1 text-sm text-slate-400">Adam Thierer</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  The case for letting new technologies exist before deciding whether to regulate them — and why the precautionary principle costs more than it saves.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B07C7FJF15" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/never-grow-up.jpg" alt="Cover of Never Grow Up" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Never Grow Up</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Jackie Chan with Zhu Mo</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                The most unguarded celebrity memoir I've read — relentless work and the regret long lives earn.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Never Grow Up</h4>
+                <p class="mt-1 text-sm text-slate-400">Jackie Chan with Zhu Mo</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  The most unguarded celebrity memoir I've read — Chan's eight decades of relentless work, breaking his body for the camera, and the kind of regret you only earn by living long enough.
+                </p>
+              </div>
             </li>
           </ul>
         </div>
 
         <!-- ─── On living, on losing ─── -->
-        <div>
+        <div data-category="life">
           <h3 class="mb-6 font-mono text-xs uppercase tracking-widest text-slate-400">On living, on losing</h3>
-          <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <li>
+          <ul class="space-y-8">
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B0165X8WN2" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/when-breath-becomes-air.jpg" alt="Cover of When Breath Becomes Air" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">When Breath Becomes Air</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Paul Kalanithi</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                A neurosurgeon writes about dying at 36 — the most clarifying book about meaning I've read.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">When Breath Becomes Air</h4>
+                <p class="mt-1 text-sm text-slate-400">Paul Kalanithi</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  A neurosurgeon writes about dying of cancer at 36 — somehow not a bleak book but the most clarifying one I've read about what makes a life meaningful while you have time.
+                </p>
+              </div>
             </li>
-            <li>
+            <li class="grid grid-cols-[88px_1fr] gap-5 sm:grid-cols-[120px_1fr] sm:gap-6">
               <a href="https://www.amazon.com/dp/B01MSJ6DAJ" target="_blank" rel="noopener" class="block overflow-hidden rounded-md border border-white/10 bg-white/[0.02] transition hover:border-sap-400/40">
                 <img src="resources/books/option-b.jpg" alt="Cover of Option B" loading="lazy" class="block h-auto w-full" />
               </a>
-              <h4 class="mt-4 text-base font-semibold leading-snug text-white">Option B</h4>
-              <p class="mt-0.5 text-xs text-slate-500">Sheryl Sandberg &amp; Adam Grant</p>
-              <p class="mt-2 text-sm leading-relaxed text-slate-400">
-                The honest manual on how to be present for someone in grief — and get through it yourself.
-              </p>
+              <div>
+                <h4 class="text-lg font-semibold leading-snug text-white">Option B</h4>
+                <p class="mt-1 text-sm text-slate-400">Sheryl Sandberg &amp; Adam Grant</p>
+                <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
+                  Sandberg on losing her husband suddenly, Grant on the research about resilience. The honest manual on how to be present for someone in grief — and how to get through it yourself.
+                </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -421,5 +476,40 @@
         <p class="font-mono"><a href="index.html" class="hover:text-slate-300">← Back to portfolio</a></p>
       </div>
     </footer>
+
+    <script>
+      // Category filter for "What shaped me". Tabs are buttons with
+      // data-filter; the matching content lives in <div data-category=...>
+      // blocks. "all" shows every block. Nothing fancy — no router, no URL
+      // params; the filter is purely a within-session UX.
+      (function () {
+        const filterBar = document.getElementById('book-filters');
+        if (!filterBar) return;
+        const buttons = filterBar.querySelectorAll('button[data-filter]');
+        const sections = document.querySelectorAll('[data-category]');
+
+        // Tailwind class buckets — kept here rather than in the buttons'
+        // initial classList so we can swap them cleanly without lint noise.
+        const active = ['border-sap-400/40', 'bg-sap-400/10', 'text-sap-300'];
+        const inactive = ['border-white/10', 'bg-white/[0.02]', 'text-slate-400', 'hover:border-white/30', 'hover:text-slate-200'];
+
+        function setActive(filterValue) {
+          buttons.forEach((btn) => {
+            const isActive = btn.dataset.filter === filterValue;
+            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            btn.classList.remove(...active, ...inactive);
+            btn.classList.add(...(isActive ? active : inactive));
+          });
+          sections.forEach((sec) => {
+            const show = filterValue === 'all' || sec.dataset.category === filterValue;
+            sec.classList.toggle('hidden', !show);
+          });
+        }
+
+        buttons.forEach((btn) => {
+          btn.addEventListener('click', () => setActive(btn.dataset.filter));
+        });
+      })();
+    </script>
   </body>
 </html>
