@@ -103,7 +103,49 @@
           class="hidden rounded-md bg-sap-400 px-3.5 py-2 text-sm font-medium text-white shadow-sm hover:bg-sap-500 md:inline-block"
           >Get in touch</a
         >
+
+        <!-- Mobile hamburger button — same pattern as index.html. -->
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-md text-slate-300 hover:bg-white/5 hover:text-white focus:outline-none focus:ring-2 focus:ring-sap-400 md:hidden"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <svg id="mobile-menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+          <svg id="mobile-menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="6" y1="18" x2="18" y2="6" />
+          </svg>
+        </button>
       </nav>
+
+      <!-- Mobile menu panel — all anchor links target index.html#... since
+           those sections live on the homepage, not here. The Books link is
+           same-page (#now-reading) to highlight the active page. -->
+      <div
+        id="mobile-menu"
+        class="invisible max-h-0 overflow-hidden border-t border-white/5 bg-ink-900/95 backdrop-blur transition-all duration-200 ease-out md:hidden"
+      >
+        <ul class="flex flex-col gap-1 px-6 py-4 text-base text-slate-200">
+          <li><a href="index.html#about" data-mobile-link class="block rounded-md px-2 py-2 hover:bg-white/5 hover:text-white">About</a></li>
+          <li><a href="index.html#work" data-mobile-link class="block rounded-md px-2 py-2 hover:bg-white/5 hover:text-white">Work</a></li>
+          <li><a href="index.html#experience" data-mobile-link class="block rounded-md px-2 py-2 hover:bg-white/5 hover:text-white">Experience</a></li>
+          <li><a href="index.html#writing" data-mobile-link class="block rounded-md px-2 py-2 hover:bg-white/5 hover:text-white">Writing</a></li>
+          <li><a href="index.html#speaking" data-mobile-link class="block rounded-md px-2 py-2 hover:bg-white/5 hover:text-white">Speaking</a></li>
+          <li><a href="books.html" data-mobile-link class="block rounded-md px-2 py-2 text-white">Books</a></li>
+          <li><a href="index.html#awards" data-mobile-link class="block rounded-md px-2 py-2 hover:bg-white/5 hover:text-white">Awards</a></li>
+          <li><a href="index.html#contact" data-mobile-link class="block rounded-md px-2 py-2 hover:bg-white/5 hover:text-white">Contact</a></li>
+          <li class="mt-2">
+            <a href="index.html#contact" data-mobile-link class="block rounded-md bg-sap-400 px-3 py-2 text-center text-sm font-medium text-white shadow hover:bg-sap-500">Get in touch</a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <main class="mx-auto max-w-6xl px-6">
@@ -484,6 +526,46 @@
         <p class="font-mono"><a href="index.html" class="hover:text-slate-300">← Back to portfolio</a></p>
       </div>
     </footer>
+
+    <script>
+      // Mobile menu toggle — same pattern as index.html. Slide-down panel
+      // from the sticky header; body scroll is locked while open.
+      (function () {
+        const button = document.getElementById('mobile-menu-button');
+        const panel = document.getElementById('mobile-menu');
+        if (!button || !panel) return;
+        const iconOpen = document.getElementById('mobile-menu-icon-open');
+        const iconClose = document.getElementById('mobile-menu-icon-close');
+
+        function setOpen(open) {
+          button.setAttribute('aria-expanded', open ? 'true' : 'false');
+          button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+          iconOpen?.classList.toggle('hidden', open);
+          iconClose?.classList.toggle('hidden', !open);
+          panel.classList.toggle('invisible', !open);
+          panel.classList.toggle('max-h-0', !open);
+          panel.classList.toggle('max-h-screen', open);
+          document.body.style.overflow = open ? 'hidden' : '';
+        }
+
+        button.addEventListener('click', () => {
+          setOpen(button.getAttribute('aria-expanded') !== 'true');
+        });
+        panel.querySelectorAll('[data-mobile-link]').forEach((link) => {
+          link.addEventListener('click', () => setOpen(false));
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+            setOpen(false);
+            button.focus();
+          }
+        });
+        const mq = window.matchMedia('(min-width: 768px)');
+        mq.addEventListener('change', (e) => {
+          if (e.matches) setOpen(false);
+        });
+      })();
+    </script>
 
     <script>
       // Category filter for "What shaped me". Tabs are buttons with
