@@ -39,6 +39,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kishore-vivekanandan.github.io/gallery.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kishore-vivekanandan.github.io/books.html</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
